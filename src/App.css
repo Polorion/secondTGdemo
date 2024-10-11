@@ -5,3 +5,28 @@
     position: relative;
     padding: 13px;
 }
+
+.slide-enter,
+.slide-exit {
+    transition: opacity 1000ms ease-out;
+}
+
+.slide-enter {
+    opacity: 0;
+}
+
+.slide-enter.slide-enter-active {
+    opacity: 1;
+}
+
+.slide-exit {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transform: translateX(0%);
+}
+
+.slide-exit-active {
+    transform: translateX(-3000%);
+}

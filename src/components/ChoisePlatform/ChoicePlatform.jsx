@@ -41,7 +41,6 @@ export const ChoicePlatform = () => {
                             {isHover && <div className={S.hover}>можно выбрать несколько пунктов</div>}
                         </span>
                     </p>
-                    <div className={S.img}></div>
                 </div>
             </div>
             <div className={S.choice}>

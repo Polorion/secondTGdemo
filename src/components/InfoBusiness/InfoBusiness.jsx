@@ -30,23 +30,14 @@ export const InfoBusiness = () => {
     const {register, handleSubmit, formState, clearErrors} = useForm({
         mode: "onTouched"
     })
-    const onSubmit = (data) => {
-
-        const sedData = () => {
-
-            return {
-                test: 'test'
-            }
-        }
-        console.log('send', data)
-    }
+ 
     return (
         <div className={S.body}>
             <div className={S.header}>
                 <h1>Время знакомиться!</h1>
                 <p>Раскажите о своем бизнесе</p>
             </div>
-            <form className={S.form} onSubmit={handleSubmit(onSubmit)}>
+            <form className={S.form}>
                 <div className={S.bodyInput}>
                     <input value={nameValue} onInput={(e) => {
                         dispatch(setChoiceName(e.target.value));
