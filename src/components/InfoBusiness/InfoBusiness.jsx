@@ -30,7 +30,7 @@ export const InfoBusiness = () => {
     const {register, handleSubmit, formState, clearErrors} = useForm({
         mode: "onTouched"
     })
- 
+
     return (
         <div className={S.body}>
             <div className={S.header}>
@@ -74,7 +74,9 @@ export const InfoBusiness = () => {
                         <p>
                             Продолжить
                         </p>
-                        <Arrow/>
+                        <div className={S.none}>
+                            <Arrow/>
+                        </div>
                     </Link>
                 </div>
             </button>

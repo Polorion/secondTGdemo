@@ -21,16 +21,17 @@ export const ChoicePlatform = () => {
         setChoice(prevState => prevState.filter(el => el !== text))
     }
     return (
-        <div className={S.body}>
-            <div className={S.header}>
-                <h1>Как вы планируете пользоваться платформой?</h1>
-                <div className={S.subTitle}>
-                    <p>
-                        Для того, чтобы завершить настройку под Ваш вид деятельности, будьте добры выбрать из
-                        нашего
-                        функционала,
-                        чем Вы планируете пользоваться.
-                        <span className={S.icon}>
+        <div className={S.container}>
+            <div className={S.body}>
+                <div className={S.header}>
+                    <h1>Как вы планируете пользоваться платформой?</h1>
+                    <div className={S.subTitle}>
+                        <p>
+                            Для того, чтобы завершить настройку под Ваш вид деятельности, будьте добры выбрать из
+                            нашего
+                            функционала,
+                            чем Вы планируете пользоваться.
+                            <span className={S.icon}>
                             <span
                                 onMouseEnter={() => setIsHover(true)}
                                 onMouseLeave={() => setIsHover(false)}
@@ -38,22 +39,23 @@ export const ChoicePlatform = () => {
 
                               <Quest/>
                             </span>
-                            {isHover && <div className={S.hover}>можно выбрать несколько пунктов</div>}
+                                {isHover && <div className={S.hover}>можно выбрать несколько пунктов</div>}
                         </span>
-                    </p>
+                        </p>
+                    </div>
                 </div>
-            </div>
-            <div className={S.choice}>
-                {choiceUsePlatform.map(el => <Choice key={el} action={choiceHandler}
-                                                     choice={choice} text={el}
-                                                     deleteChoice={deleteChoice}/>)}
-            </div>
-            <div className={S.btnNav}>
-                <Link to={"/"}>
-                    <button className={S.back}>Назад
-                    </button>
-                </Link>
-                <button className={S.next}>Продолжить</button>
+                <div className={S.choice}>
+                    {choiceUsePlatform.map(el => <Choice key={el} action={choiceHandler}
+                                                         choice={choice} text={el}
+                                                         deleteChoice={deleteChoice}/>)}
+                </div>
+                <div className={S.btnNav}>
+                    <Link to={"/"}>
+                        <button className={S.back}>Назад
+                        </button>
+                    </Link>
+                    <button className={S.next}>Продолжить</button>
+                </div>
             </div>
         </div>
     );

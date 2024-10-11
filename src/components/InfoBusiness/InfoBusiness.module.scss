@@ -7,6 +7,7 @@
   justify-content: center;
   margin: 0 auto;
 
+  margin-bottom: 10px;
 
   .header {
     margin-bottom: 51px;
@@ -73,6 +74,10 @@
     .bodyNext {
       position: relative;
 
+      a {
+        color: $black;
+      }
+
       svg {
         position: absolute;
         bottom: -15px;
@@ -116,6 +121,14 @@
       color: $white;
       right: 0 !important;
       padding: 15px 0;
+
+      a {
+        color: $white !important;
+      }
+
+      .none {
+        display: none;
+      }
 
       img {
         display: none;

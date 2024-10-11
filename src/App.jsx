@@ -45,15 +45,17 @@ import {Header} from "./components/Header/Header.jsx";
 const App = () => {
     const location = useLocation();
     return (
-        <TransitionGroup>
-            <Header/>
-            <CSSTransition key={location.key} classNames="slide" timeout={1000}>
-                <Routes location={location}>
-                    <Route path={"/"} element={<InfoBusiness/>}/>
-                    <Route path={"next"} element={<ChoicePlatform/>}/>
-                </Routes>
-            </CSSTransition>
-        </TransitionGroup>
+        <div className="container">
+            <TransitionGroup>
+                <Header/>
+                <CSSTransition key={location.key} classNames="slide" timeout={1000}>
+                    <Routes location={location}>
+                        <Route path={"/"} element={<InfoBusiness/>}/>
+                        <Route path={"next"} element={<ChoicePlatform/>}/>
+                    </Routes>
+                </CSSTransition>
+            </TransitionGroup>
+        </div>
     );
 };
 

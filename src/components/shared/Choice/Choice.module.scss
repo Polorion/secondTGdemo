@@ -8,13 +8,19 @@
   margin-right: 10px;
   margin-bottom: 10px;
   cursor: pointer;
-  transition: all .5s;
+  transition: all 0.7s;
+  -webkit-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 5px 5px 0px rgba(0, 0, 0, 0.75);
 
 
   &.active {
-    background-color: $black;
+    background-color: $blackButton;
     color: $white;
     border-color: transparent;
+    -webkit-box-shadow: inset 9px 12px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 9px 12px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 9px 12px 5px 0px rgba(0, 0, 0, 0.75);
   }
 }
 
