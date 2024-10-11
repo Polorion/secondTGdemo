@@ -17,8 +17,9 @@ import {
     setChoiceManagerRedux,
     setChoiceName
 } from "../../store/main/main.js";
+import {Link} from "react-router-dom";
 
-export const InfoBusiness = ({next}) => {
+export const InfoBusiness = () => {
     const nameValue = useSelector(state => state.main.name)
     const dispatch = useDispatch()
 
@@ -77,13 +78,13 @@ export const InfoBusiness = ({next}) => {
                 </div>
             </form>
             <button className={S.nextPage}>
-                <div onClick={() => {
-                    next(prev => !prev)
-                }} className={S.bodyNext}>
-                    <p>
-                        Продолжить
-                    </p>
-                    <Arrow/>
+                <div className={S.bodyNext}>
+                    <Link to={"/next"}>
+                        <p>
+                            Продолжить
+                        </p>
+                        <Arrow/>
+                    </Link>
                 </div>
             </button>
         </div>

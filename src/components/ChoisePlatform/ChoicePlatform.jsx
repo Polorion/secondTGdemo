@@ -6,8 +6,9 @@ import {Choice} from "../shared/Choice/Choice";
 import {useState} from "react";
 import {deleteChoicePlatformRedux, setChoicePlatformRedux} from "../../store/main/main.js";
 import {useDispatch} from "react-redux";
+import {Link} from "react-router-dom";
 
-export const ChoicePlatform = ({next}) => {
+export const ChoicePlatform = () => {
     const [isHover, setIsHover] = useState(false)
     const [choice, setChoice] = useState([])
     const dispatch = useDispatch()
@@ -49,10 +50,10 @@ export const ChoicePlatform = ({next}) => {
                                                      deleteChoice={deleteChoice}/>)}
             </div>
             <div className={S.btnNav}>
-                <button onClick={() => {
-                    next(prev => !prev)
-                }} className={S.back}>Назад
-                </button>
+                <Link to={"/"}>
+                    <button className={S.back}>Назад
+                    </button>
+                </Link>
                 <button className={S.next}>Продолжить</button>
             </div>
         </div>
