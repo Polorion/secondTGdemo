@@ -9,7 +9,7 @@
 
 .slide-enter,
 .slide-exit {
-    transition: opacity 1000ms ease-out;
+    transition: all 1000ms ease-out;
 }
 
 .slide-enter {
@@ -29,5 +29,18 @@
 }
 
 .slide-exit-active {
-    transform: translateX(-3000%);
+    opacity: 0;
+   animation: example 0.1s;
+}
+
+@keyframes example {
+    0% {
+     opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
 }
